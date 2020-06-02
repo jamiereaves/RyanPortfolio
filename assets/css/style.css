@@ -1,0 +1,496 @@
+/*container for the nav bar. set position to relative so child elements can be placed absolutely. set background/font color. set default
+font family for navbar. set width to 100% to occupy entire page. set appropriate height. set thin, grey bottom border.*/
+.navContainer{
+    position:relative;
+    background: #ffffff;
+    color: #eee;
+    width: 100%;
+    height:82px;
+    border-bottom-style: solid;
+    border-bottom-color: #777777;
+    border-bottom-width: 2px;
+    font-family: 'Georgia', Times, "Times New Roman", serif;
+    margin-bottom: 0;
+}
+
+/*navbar is as high as it's container. navbar is centered with auto margin and is 4/5 as wide as the page.*/
+.navbar {
+    height:100%;
+    margin:0 auto;
+    width:80%;
+}
+
+/*this should be hidden for all screen widths above 576px*/
+header, .headerContent {
+    display:none;
+}
+
+/*for links on the navbar. center text. set padding to place text vertically.
+when NORMAL/VISITED. set normal background/font color-background matches parent, so 
+only text is visible.
+when HOVER/ACTIVE. set accent background/font color. round corners. add subtle shadow to top and left sides to accent*/
+.nav-link:link, .nav-link:visited{ 
+    background:#ffffff;
+    color: #777777;
+    padding: 25px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav-link:hover, .nav-link:active {
+    background: #4aaaa5;
+    color: #eee;
+    border-radius: 10px;
+    box-shadow:1px 0px 2px 0px #777777;
+}
+
+/*eliminates padding for bootstrap container so that the width is truly 100%*/
+.container-fluid {
+    padding:0;
+}
+
+/*set position of all rows to relative to allow child elements to be placed absolutely. rows take up 
+the entire page. center rows with auto margins.*/
+.row{
+    position:relative;
+    width:100%;
+    margin:auto;
+}
+
+/*applies to header box with name. set background, font colors. set font attributes.
+float left. position element to the bottom of the parent box. set padding to center text, 
+make box the appropriate size. no margin so the element hugs the left of the parent box.
+round top corners.*/ 
+#headerName {
+    background: #4aaaa5;
+    color: #eee;
+    font-size: 1.5em;
+    font-weight: bold;
+    float: left;
+    padding: 20px 20px 20px 20px;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+/*Parent box for the main content of the page. set background/font colors. set appropriate
+font. set width to 960 px. auto margin so that the content stays centered if the browser 
+window width is altered. set thin, solid, grey border with very subtly rounded edges.*/
+#mainContent{
+    background: #ffffff;
+    color: #777777;
+    margin: auto 20px 10px 0;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    border-style: solid;
+    border-color: #777777;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+/*parent box for the sidebar. same style as parent box for the main content (see above)*/
+#sideBar{
+    background: #ffffff;
+    color: #777777;
+    margin: 0 20px auto 0;
+    padding:0;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    border-style: solid;
+    border-color: #777777;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+/* header for the main content. set background/font colors. set padding/indentation to place 
+text appropriately. set right/left margins only to align content header text with page header
+text. thin, solid, grey border on the bottom only. set appropriate font.*/
+#contentHeader {
+    color:#4aaaa5;
+    background: #ffffff;
+    padding: 25px 20px 10px 0px;
+    margin: 0px 20px 10px 20px;
+    text-indent: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #777777;
+    border-bottom-width: 1px;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/*header for the sidebar. same style as header for the main content (see above).*/
+#sideBarHeader {color:#4aaaa5;
+    background: #ffffff;
+    padding: 25px 20px 10px 0px;
+    margin: 0px 20px 0px 20px;
+    text-indent: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #777777;
+    border-bottom-width: 1px;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/*set appropriate margins for the main content right/left: 20px bottom: 25px*/
+.contentBody {
+    margin: 0px 20px 25px 20px;
+    background: #ffffff;
+}
+
+/*social links take up the entire subcolumn. margin set to space links apart, but not 
+so large that the links collapse strangely as the browser window and the parent box
+shrink.*/
+.socialLink{
+    width:100%;
+    margin:8px;
+}
+
+/*set spacer to be as wide as the page and 85px high. does not display, but keeps its
+position in the page layout.*/
+.spacer {
+    width:100%;
+    height:85px;
+    visibility: hidden;
+}
+
+/*fix the footer to the bottom of the browser window. make footer as wide as the
+browser window. set height to 40 px. grey background. solid, teal top border with
+a larger width than the header border.*/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #666666;
+    border-top-style: solid;
+    border-top-color: #4aaaa5;
+    border-top-width: 5px;
+}
+
+/*center footer text and set appropriate background/font colors. set top margin to
+align the text vertically*/
+#footerText {
+    background: #666666;
+    color: #eee;
+    text-align: center;
+    margin-top:10px;
+}
+
+/*******************INDEX.HTML SPECIFIC CSS*********************************/
+
+/*set height/width for image. float left so that the text wraps appopriately.
+set the right and bottom margins to place text appropriately. round corners
+subtly, but more than main content box. set max height to auto so that the
+picture scales to the size of the browser window.*/
+#bioPhoto{
+    max-width: 40%;
+    max-height: auto;
+    float: left;
+    margin: 0px 15px 0px 0px;
+    border-radius:3px;
+}
+
+/*set appropriate line height to make text easy to read.*/
+#bioText {
+    line-height: 1.5;
+}
+
+/*for name and email fields. set width to 100% parent container so that the text area 
+scales to the size of the browser window. set padding to give space within the field to 
+make text more readable. set top and bottom margins to create space vertically between fields. 
+bs-bb so width/height aren't affected by padding/borders. round corners*/
+.shortForm{
+    width: 100%;
+    padding:5px 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/*for message field. set padding to give space within the field to make text more 
+readable. set top and bottom margins to create space vertically between fields. bs-bb 
+so width/height aren't affected by padding/borders. round corners. Resize:none - so
+the size of the message field can't be collapsed. set width to 100% of parent container
+so that the text area scales to the size of the browser window.*/
+.longForm{
+    padding: 5px 5px;
+    margin: 8px 0;
+    width:100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    resize: none;
+}
+
+/*for both all input areas when selected/active. remove default blue outline border. 
+set accent background/font colors. set accent border color/width.*/ 
+.shortForm:focus,
+.longForm:focus {
+    outline: none;
+    border-color: #4aaaa5;
+    border-width: 2px;
+    background-color: #999999;
+    color: #fff;
+}
+
+/* for contact button. remove default blue outline border. set background/font colors.
+set larger font size. set padding to size appropriately. center text. set border 
+color/width and round corners. set subtle grey/teal shadow.*/
+.contactButton {
+    outline:none;
+    background: #4aaaa5;
+    color: #eee;
+    font-size: 18px;
+    padding: 20px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 5px;
+    border-color: #777777;
+    border-width: 2px;
+    box-shadow: 2px 2px 1px 0px #426967;
+}
+
+/* for reset button. remove default blue outline border. set background/font colors.
+set larger font size. set padding to size appropriately. center text. set border 
+color/width. set border radius to 100% to create a circular button set subtle grey/teal 
+shadow.*/
+.resetButton {
+    outline:none;
+    background: #4aaaa5;
+    color: #eee;
+    font-size: 18px;
+    padding: 20px 10px;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+    border-radius: 100% 100%;
+    border-color: #777777;
+    border-width: 2px;
+    box-shadow: 2px 2px 1px 0px #426967;    
+}
+
+/*for contact/reset button when HOVER. set a more pronounced shadow to "raise" the
+button and indicate the user can click.*/
+.contactButton:hover,
+.resetButton:hover {
+    box-shadow: 3px 3px 2px 0px #426967;
+}
+
+/*for contact/reset button when ACTIVE. restore default shadow to "lower" button and
+create a click effect*/
+.contactButton:active,
+.resetButton:active {
+    box-shadow: 2px 2px 1px 0px #426967;
+}
+
+/*******************PORTFOLIO.HTML SPECIFIC CSS*********************************/
+
+/*clearfix hack for main conent box to prevent overflow issues*/
+.bio:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+/*clearfix hack for row container elements to prevent overflow issues*/
+.rowContent:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+/*for portfolio links. set width to 30% of main content box to create appropriately
+sized elements for a row of three. set height to mirror example parameters (207px).
+float left so link elements line up appropriately (hug the left). set right/left 
+margins to create space between elements. round corners. set position relative so
+children elements can be positioned. create solid, teal border. relatively pronounced
+grey shadow to indicate active link.*/
+.portLink{
+    width:260px;
+    height:210px;
+    float:left;
+    margin:20px 10px 25px;
+    border-radius: 20px;    
+    position:relative;
+    border-style: solid;
+    border-color: #4aaaa5;
+    border-width: 5px;
+    box-shadow:5px 5px 3px 0px grey;
+    overflow: auto;
+}
+ 
+/*sets a large right margin for even numbered links so that there are at most two links
+per row.*/
+.portLink:nth-child(even) {
+        margin-right: 40px;
+    }
+
+
+/*for portfolio link images. make photo fill entire parent container. set border radius slightly smaller than 
+parent's to remove weird empty space at corners.*/
+#portPhoto {
+    width:100%;
+    height:100%;
+    border-radius:15px;
+}
+
+/*for portfolio link descriptions. set postion relative to parent (link) container. adjust top
+and bottom positions to place text in the desired vertical position relative to parent. center 
+text. adjust padding to place text vertically within element. set background/font colors. set
+large font size. hide element when not HOVER/ACTIVE. set transition time to create a more
+natural transition between states.*/
+.imgDesc {
+    position: absolute;
+    top:80px;
+    bottom:20px;
+    left:0;
+    right:0;
+    text-align:center;
+    padding: 22px 0 0 0;
+    background: #4aaaa5;
+    color: #ffffff;
+    font-size: 24px;
+    visibility:hidden;
+    opacity:0;
+    transition:opacity .4s, visibility .2s;
+}
+
+/*when user hovers over link, make portfolio link descriptions visible, and 85% opaque.*/
+.portLink:hover .imgDesc {
+    visibility: visible;
+    opacity: 0.85;
+}
+
+/*when user hovers over portfolio link, reduce opacity of portfolio images to 60%.*/
+.portLink:hover .portPhoto {
+    opacity: 0.6;
+}
+
+/*when user hovers over portfolio link, shadow is increased to "raise" link*/
+.portLink:hover {
+    box-shadow: 8px 8px 6px 0px grey;
+}
+
+/*when portfolio link is clicked, reduce shadow to create click effect*/
+.portLink:active {
+    box-shadow: 3px 3px 2px 0px grey;
+}
+
+/*when portfolio link is clicked, increase opacity of portfolio link description to 100%*/
+.portLink:active .imgDesc {
+    visibility:visible;
+    opacity:1;
+}
+
+/*when portfolio link is clicked, increase opacity of portfolio link image slightly (70%)*/
+.portLink:active .portPhoto{
+    opacity: 0.7;
+}
+
+/*******************************************************************************************************
+i tried really hard not to use media queries with this page, but i ran into two issues that i
+wasn't able to fix with css alone. i couldn't figure out another way to keep the columns from collapsing 
+to the left for screens narrower than 768px, so i set the margins for the main content and sidebar to 
+center those sections on smaller screens. i also found that if i narrowed the screen width beyond 576px,
+the navbar links would disappear no matter what i did.  to fix this i set a media query to replicate my small
+screen header from the responsive portfolio below screen widths of 576px.  if these media queries and the corresponding 
+html for the alternate header are commented out the website is still functional but not as aesthetically pleasing.
+**********************************************************************************************************/
+
+/*media query to fix left justification of main content and sidebar below width:768px*/
+@media only screen and (max-width:768px) {
+    #mainContent {
+        margin:5px 10px;
+    }
+
+    #sideBar {
+        margin:5px 10px;
+    }
+}
+
+/*media query to fix disappearing navbar link below width:576px*/
+@media only screen and (max-width:576px){
+    /*hide navbar container contents so they no longer hold a place
+    on the page*/
+    .navContainer {
+        display:none;
+    }
+   
+    /*set header style as in the responsive portfolio. make visible*/
+    header{
+        height:130px;
+        background: #ffffff;
+        color: #eee;
+        width: 100%;
+        border-bottom-style: solid;
+        border-bottom-color: #777777;
+        border-bottom-width: 2px;
+        font-family: 'Georgia', Times, "Times New Roman", serif;
+        margin-bottom: 0px;
+        visibility: visible;
+        display:inline-block;
+        position:relative;
+    }
+    
+    /*set header content to fill entire screen. make visible.*/
+    .headerContent {
+        width:100%;
+        height:130px;
+        display:inline-block;
+        visibility: visible;
+    }
+    
+    /*set header name to full screen width and half the height of the parent container. position
+    absolutely at the top of the parent container. eliminate rounded edges. center text.*/
+    #headerName{
+        width:100%;
+        height:50%;
+        position:absolute;
+        top:0;
+        text-align:center;
+    }
+   
+    /*set topnav to full screen width and half the height of the parent container. position absolutely 
+    at the top of the parent container. eliminate margins and float left instead of right. set display
+    to flex so that links within can easily be spaced horizontally and center these links within the 
+    topnav. set overflow to hidden to retain links within header*/
+    .topnav {
+        width: 100%;
+        height:50%;
+        float:left;
+        position:absolute;
+        bottom:0;
+        margin:0;
+        display:flex;
+        justify-content:center;
+        overflow:hidden;
+    }
+
+    /*set style of links as in the responsive portfolio. set width of topnav links to occupy 1/3 of parent 
+    container. set margin to auto to evenly space. align links along the bottomm of the parent container.*/
+    .altLink {
+        background: #ffffff;
+        color: #777777;
+        padding: 25px 20px;
+        text-align: center;
+        text-decoration: none;
+        width: 33%;
+        margin:auto;
+        bottom:0;
+        }
+    
+    /*set HOVER/ACTIVE link style as in the responsive portfolio.*/
+    .altLink:hover, .altLink:active {
+        background: #4aaaa5;
+        color: #eee;
+        padding: 25px 20px;
+        text-align: center;
+        text-decoration: none;
+        }
+
+}
