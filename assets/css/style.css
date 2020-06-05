@@ -89,6 +89,22 @@ window width is altered. set thin, solid, grey border with very subtly rounded e
     border-width: 1px;
     border-radius: 2px;
 }
+/*Parent box for landing page*/
+#landingContent{
+    /*background: #ffffff;
+    color: #777777;
+    margin: auto 20px 10px 0;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    border-style: solid;
+    border-color: #777777;
+    border-width: 1px;
+    border-radius: 2px;*/
+    height:500px;
+}
+/*action button that navigates from landing page*/
+#actionButton{
+    margin:auto;
+}
 
 /*parent box for the sidebar. same style as parent box for the main content (see above)*/
 #sideBar{

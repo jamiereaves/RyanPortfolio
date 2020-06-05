@@ -22,11 +22,16 @@
             <!--bootstrap navbar-->    
             <nav class="navbar navbar-expand-sm">
                     <!--create navbar header-->
-                   <a class="navbar-brand" id="headerName">Jamie Reaves</a>  
+                   <a class="navbar-brand" id="headerName">LOGO HERE!</a>  
                     <!--parent container for navbar links-->
-                    <div  class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <!--three right aligned navbar links-->
+                    <!--div  class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <three right aligned navbar links>
                         <ul class="navbar-nav ml-auto">
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="portfolio.html">Albums</a>
+                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="#">About</a>
                             </li>
@@ -35,12 +40,8 @@
                               <a class="nav-link" href="contact.html">Contact</a>
                             </li>
                         
-                            <li class="nav-item">
-                                <a class="nav-link" href="portfolio.html">Portfolio</a>
-                            </li>
-                        
                       </ul>
-                    </div>
+                    </div-->
             </nav>
 
     </div>
@@ -50,15 +51,13 @@
     SCREENS <576px & CAN BE COMMENTED OUT-->
     <header>
         <section class="headerContent">
-            <h1 id="headerName">Jamie Reaves</h1>
+            <h1 id="headerName">LOGO HERE!</h1>
             <!--navigation bar linking the three component pages-->
-            <nav class="topnav">
-                <!--create three links: a placeholder link for the current page & links
-                to the other two pages-->
+            <!--nav class="topnav">
+                <a class="altLink" href="portfolio.html">Albums</a>
                 <a class="altLink" href="#">About</a>
                 <a class="altLink" href="contact.html">Contact</a>
-                <a class="altLink" href="portfolio.html">Portfolio</a>
-            </nav>
+            </nav -->
         </section>
     </header>
 
@@ -71,82 +70,11 @@
        <!--empty "spacer" column a twelth of the total width--> 
        <div class="col-md-1"></div>
        <!--column that contains the main content takes up 7/12 of the row on md & larger screens. columns collapse for s/xs-->
-       <div class="col-md-7" id="mainContent">
-            <!--header for main content-->
-            <h1 id="contentHeader">About Me</h1>
-            <!--box for picture and text-->
-            <section class="contentBody">
-                    
-                    <!--main picture-->
-                    <img class="img-fluid" id="bioPhoto" src="assets/images/bioPhoto.jpg" alt="Jamie Reaves">
-                    
-                    <!--biographical introduction with three paragraphs separated by line breaks-->
-                    <p id="bioText">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
-                        et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem 
-                        quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-                        eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem 
-                        ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi 
-                        tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima 
-                        veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid 
-                        ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit 
-                        esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas 
-                        nulla pariatur.
-                    </p> 
-
-                <br>
-
-                    <p id="bioText">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis 
-                        suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit 
-                        qui in ea voluptate velit esse quam nihil molestiae consequatur. 
-                    </p>
-
-                <br>
-
-                    <p id="bioText">Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur Lorem ipsum dolor sit amet, 
-                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
-                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur 
-                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </p>
-            </section>
+       <div class="col-md-10 d-flex justify-content-center" id="landingContent">
+        <a href="about.html" class="btn btn-primary btn-lg active" id="actionButton" role="button" aria-pressed="true">ACTION BUTTON!!!</a>
+            
        </div>
 
-       
-       <!--break between content and sidebar--> 
-       <br>
-       <!--column that contains the sidebar takes up 1/4 of the row on md & larger screens. columns collapse for s/xs-->
-       <div class="col-md-3" id="sideBar">
-            <!--bootstrap card aka sidebar with centered text-->
-            <div class="card text-center">
-                <!--sidebar message-->
-                <div class="card-header" id="sideBarHeader">Connect with me</div>
-                    <!--subrow to contain social links-->
-                    <div class="row">
-                        <!--bootstrap container for social links-->
-                        <div class="card-body">
-                            <!--3 columns, each take up a third of the parent row, each contain a social link with an associated image-->
-                            <col-md-4>
-                                <a class=socialLink href="#">
-                                    <img src="assets/images/GitHub-Mark-32px.png" class="social" alt="Github">
-                                </a>
-                            </col-md-4> 
-                        
-                            <col-md-4>                          
-                                <a class=socialLink href="#">
-                                    <img src="assets/images/if_square-linkedin_317725.png" class="social" alt="LinkedIn">       
-                                </a>
-                            </col-md-4> 
-
-                            <col-md-4>
-                                <a class=socialLink href="#">
-                                     <img src="assets/images/stackoverflow-2-32.png" class="social" alt="StackOverflow">
-                                </a>
-                            </col-md-4>     
-                        </div>
-                    </div>
-            </div>
-        </div>
 
        <!--empty "spacer" column a twelth of the total width-->  
        <div class="col-md-1"></div>
