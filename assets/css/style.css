@@ -45,7 +45,7 @@ when NORMAL/VISITED. set normal background/font color-background matches parent,
 only text is visible.
 when HOVER/ACTIVE. set accent background/font color. round corners. add subtle shadow to top and left sides to accent*/
 .nav-link:link, .nav-link:visited{ 
-    background:#ffffff;
+    background:transparent;
     color: #777777;
     padding: 25px 20px;
     text-align: center;
@@ -78,7 +78,7 @@ float left. position element to the bottom of the parent box. set padding to cen
 make box the appropriate size. no margin so the element hugs the left of the parent box.
 round top corners.*/ 
 #headerName {
-    background: #4aaaa5;
+    background: rgba(90, 98, 104, 0.9);
     color: #eee;
     font-size: 1.5em;
     font-weight: bold;
@@ -94,8 +94,8 @@ round top corners.*/
 font. set width to 960 px. auto margin so that the content stays centered if the browser 
 window width is altered. set thin, solid, grey border with very subtly rounded edges.*/
 #mainContent{
-    background: #ffffff;
-    color: #777777;
+    background: rgba(90, 98, 104, 0.9);
+    color: #eeeeee;
     margin: auto 20px 10px 0;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     border-style: solid;
@@ -116,19 +116,23 @@ window width is altered. set thin, solid, grey border with very subtly rounded e
     height:500px;
     background: transparent;
 }
+
+#homeRow{
+    margin-bottom: 10px;
+}
 /*action button that navigates from landing page*/
 #actionButton{
     margin:auto;
 }
 
 #carouselGreatestHits{
-    width:60%;
+    width:80%;
 }
 
 /*parent box for the sidebar. same style as parent box for the main content (see above)*/
 #sideBar{
-    background: #ffffff;
-    color: #777777;
+    background: rgba(90, 98, 104, 0.9);
+    color: #ffffff;
     margin: 100px 20px auto 0;
     padding:0;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
@@ -142,13 +146,13 @@ window width is altered. set thin, solid, grey border with very subtly rounded e
 text appropriately. set right/left margins only to align content header text with page header
 text. thin, solid, grey border on the bottom only. set appropriate font.*/
 #contentHeader {
-    color:#4aaaa5;
-    background: #ffffff;
+    color: #eeeeee;
+    background: transparent;
     padding: 25px 20px 10px 0px;
     margin: 0px 20px 10px 20px;
     text-indent: 0px;
     border-bottom-style: solid;
-    border-bottom-color: #777777;
+    border-bottom-color: #aaaaaa;
     border-bottom-width: 1px;
     font-family: 'Georgia', Times, Times New Roman, serif;
     font-size: 1.5em;
@@ -156,8 +160,9 @@ text. thin, solid, grey border on the bottom only. set appropriate font.*/
 }
 
 /*header for the sidebar. same style as header for the main content (see above).*/
-#sideBarHeader {color:#4aaaa5;
-    background: #ffffff;
+#sideBarHeader {
+    color:#ffffff;
+    background: rgba(90, 98, 104, 0.9);
     padding: 25px 20px 10px 0px;
     margin: 0px 20px 0px 20px;
     text-indent: 0px;
@@ -169,10 +174,15 @@ text. thin, solid, grey border on the bottom only. set appropriate font.*/
     font-weight: bold;
 }
 
+.card{
+    background: rgba(90, 98, 104, 0.9);
+}
+
 /*set appropriate margins for the main content right/left: 20px bottom: 25px*/
 .contentBody {
     margin: 0px 20px 25px 20px;
-    background: #ffffff;
+    background: transparent;
+    color: #ffffff;
 }
 
 /*social links take up the entire subcolumn. margin set to space links apart, but not 
@@ -189,6 +199,7 @@ position in the page layout.*/
     width:100%;
     height:85px;
     visibility: hidden;
+    margin-bottom: 10px;
 }
 
 /*fix the footer to the bottom of the browser window. make footer as wide as the
@@ -200,16 +211,14 @@ a larger width than the header border.*/
     bottom: 0;
     width: 100%;
     height: 50px;
-    background-color: #666666;
-    border-top-style: solid;
-    border-top-color: #4aaaa5;
-    border-top-width: 5px;
+    background-color: transparent;
+    margin-top: 10px;
 }
 
 /*center footer text and set appropriate background/font colors. set top margin to
 align the text vertically*/
 #footerText {
-    background: #666666;
+    background: transparent;
     color: #eee;
     text-align: center;
     margin-top:10px;
@@ -296,7 +305,7 @@ color/width. set border radius to 100% to create a circular button set subtle gr
 shadow.*/
 .resetButton {
     outline:none;
-    background: #4aaaa5;
+    background: #777777;
     color: #eee;
     font-size: 18px;
     padding: 20px 10px;
@@ -304,23 +313,23 @@ shadow.*/
     text-decoration: none;
     float: right;
     border-radius: 100% 100%;
-    border-color: #777777;
+    border-color: #eeeeee;
     border-width: 2px;
-    box-shadow: 2px 2px 1px 0px #426967;    
+    box-shadow: 2px 2px 1px 0px #333333;    
 }
 
 /*for contact/reset button when HOVER. set a more pronounced shadow to "raise" the
 button and indicate the user can click.*/
 .contactButton:hover,
 .resetButton:hover {
-    box-shadow: 3px 3px 2px 0px #426967;
+    box-shadow: 3px 3px 2px 0px #222222;
 }
 
 /*for contact/reset button when ACTIVE. restore default shadow to "lower" button and
 create a click effect*/
 .contactButton:active,
 .resetButton:active {
-    box-shadow: 2px 2px 1px 0px #426967;
+    box-shadow: 2px 2px 1px 0px #333333;
 }
 
 /*******************PORTFOLIO.HTML SPECIFIC CSS*********************************/
@@ -367,9 +376,9 @@ parent's to remove weird empty space at corners.*/
     border-radius: 20px;   
     position:relative;
     border-style: solid;
-    border-color: #4aaaa5;
+    border-color: #eeeeee;
     border-width: 5px;
-    box-shadow:5px 5px 3px 0px grey;
+    box-shadow:5px 5px 3px 0px #333333;
     overflow: auto;
 }
 
@@ -391,7 +400,7 @@ natural transition between states.*/
     font-size: 24px;
     visibility:hidden;
     opacity:0;
-    transition:opacity .4s, visibility .2s;
+    transition:opacity .4s, visibility .9s;
 }
 
 /*when user hovers over link, make portfolio link descriptions visible, and 85% opaque.*/
@@ -408,12 +417,12 @@ natural transition between states.*/
 
 /*when user hovers over portfolio link, shadow is increased to "raise" link*/
 #portPhoto:hover {
-    box-shadow: 8px 8px 6px 0px grey;
+    box-shadow: 8px 8px 6px 0px #333333;
 }
 
 /*when portfolio link is clicked, reduce shadow to create click effect*/
 #portPhoto:active {
-    box-shadow: 3px 3px 2px 0px grey;
+    box-shadow: 3px 3px 2px 0px #333333;
 }
 
 
