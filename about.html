@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!--set the viewport to make sure the page displays correctly on all devices-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework #2</title>
+    <title>Ryan Shultis Photography</title>
     <!--reset css-->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <!--link to Bootstrap-->
@@ -15,32 +15,32 @@
 </head>
 
 <!--set the background image-->
-<body style="background-image:url(ep_naturalwhite.png)">
+<body>
 
     <!--create a container for the navbar-->
     <div class="navContainer">
             <!--bootstrap navbar-->    
             <nav class="navbar navbar-expand-sm">
                     <!--create navbar header-->
-                   <a class="navbar-brand" id="headerName">LOGO HERE!</a>  
+                   <a class="navbar-brand" id="headerName" href="home.html">LOGO HERE!</a>  
                     <!--parent container for navbar links-->
                     <div  class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <!--three right aligned navbar links-->
-                        <ul class="navbar-nav ml-auto">
-                        
-                            <li class="nav-item">
-                                <a class="nav-link" href="portfolio.html">Albums</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
-                            </li>
-                        
-                            <li class="nav-item">
-                              <a class="nav-link" href="contact.html">Contact</a>
-                            </li>
-                        
-                      </ul>
+                      <!--three right aligned navbar links-->
+                      <ul class="navbar-nav ml-auto">
+                          <li>
+                              <div class="btn-group">
+                                  <button type="button" class="btn btn-secondary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <span class="navbar-toggler-icon"></span>
+                                  </button>
+                                  <div class="dropdown-menu dropdown-menu-right">
+                                  <a class="dropdown-item nav-link" type="button" href="portfolio.html" style="text-align: right">albums</a>
+                                  <a class="dropdown-item nav-link" type="button" href="#" style="text-align: right">about</a>
+                                  </div>
+                              </div>
+                          
+                          </li>
+                      
+                    </ul>
                     </div>
             </nav>
 
@@ -58,7 +58,6 @@
                 to the other two pages-->
                 <a class="altLink" href="portfolio.html">Albums</a>
                 <a class="altLink" href="#">About</a>
-                <a class="altLink" href="contact.html">Contact</a>
             </nav>
         </section>
     </header>
@@ -70,16 +69,16 @@
     <!--row that will contain the main content and sidebar -->
     <div class="row">
        <!--empty "spacer" column a twelth of the total width--> 
-       <div class="col-md-1"></div>
+       <div class="col-md-2"></div>
        <!--column that contains the main content takes up 7/12 of the row on md & larger screens. columns collapse for s/xs-->
-       <div class="col-md-7" id="mainContent">
+       <div class="col-md-6" id="mainContent">
             <!--header for main content-->
             <h1 id="contentHeader">About Me</h1>
             <!--box for picture and text-->
             <section class="contentBody">
                     
                     <!--main picture-->
-                    <img class="img-fluid" id="bioPhoto" src="assets/images/bioPhoto.jpg" alt="Jamie Reaves">
+                    <img class="img-fluid" id="bioPhoto" src="assets/images/selfPortrait.jpg" alt="Jamie Reaves">
                     
                     <!--biographical introduction with three paragraphs separated by line breaks-->
                     <p id="bioText">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
@@ -97,13 +96,6 @@
 
                 <br>
 
-                    <p id="bioText">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis 
-                        suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit 
-                        qui in ea voluptate velit esse quam nihil molestiae consequatur. 
-                    </p>
-
-                <br>
-
                     <p id="bioText">Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur Lorem ipsum dolor sit amet, 
                         consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
                         ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
@@ -114,43 +106,64 @@
        </div>
 
        
-       <!--break between content and sidebar--> 
-       <br>
-       <!--column that contains the sidebar takes up 1/4 of the row on md & larger screens. columns collapse for s/xs-->
-       <div class="col-md-3" id="sideBar">
-            <!--bootstrap card aka sidebar with centered text-->
-            <div class="card text-center">
-                <!--sidebar message-->
-                <div class="card-header" id="sideBarHeader">Connect with me</div>
-                    <!--subrow to contain social links-->
-                    <div class="row">
-                        <!--bootstrap container for social links-->
-                        <div class="card-body">
-                            <!--3 columns, each take up a third of the parent row, each contain a social link with an associated image-->
-                            <col-md-4>
-                                <a class=socialLink href="#">
-                                    <img src="assets/images/GitHub-Mark-32px.png" class="social" alt="Github">
-                                </a>
-                            </col-md-4> 
-                        
-                            <col-md-4>                          
-                                <a class=socialLink href="#">
-                                    <img src="assets/images/if_square-linkedin_317725.png" class="social" alt="LinkedIn">       
-                                </a>
-                            </col-md-4> 
-
-                            <col-md-4>
-                                <a class=socialLink href="#">
-                                     <img src="assets/images/stackoverflow-2-32.png" class="social" alt="StackOverflow">
-                                </a>
-                            </col-md-4>     
-                        </div>
-                    </div>
-            </div>
-        </div>
+      <!--break between content and sidebar--> 
+      <br>
+      <!--column that contains the sidebar takes up 1/4 of the row on md & larger screens. columns collapse for s/xs--> 
+      <div class="col-md-2" id="sideBar">
+           <!--bootstrap card aka sidebar with centered text-->
+           <div class="card text-center">
+               <!--sidebar message-->
+               <div class="card-header" id="sideBarHeader">Let's Connect</div>
+                   <!--subrow to contain social links-->
+                   <div class="row">
+                       <!--bootstrap container for social links-->
+                       <div class="card-body">
+                           <!--3 columns, each take up a third of the parent row, each contain a social link with an associated image-->
+                           <col-md-6>
+                               <a class=socialLink href="https://instagram.com/ryan.shultis.photos/" target="blank">
+                                   <img src="assets/images/iconmonstr-instagram-4-48.png" class="social" alt="Instagram">
+                               </a>
+                           </col-md-6> 
+                       
+                           <col-md-6>                          
+                               <a class=socialLink href="#" data-toggle="modal" data-target="#contactModal">
+                                   <img src="assets/images/iconmonstr-email-10-48.png" class="social" alt="eMail">       
+                               </a>
+                                <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="contactModalLabel">Contact Me</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <form>
+                                            Name <br>
+                                            <!--inputs for the name/email-->
+                                            <input class="shortForm" type="text" name="name" placeholder="Jane Doe"> <br><br>
+                                            Email <br>
+                                            <input class="shortForm" type="text" name="email" placeholder="example@gmail.com"> <br><br>
+                                            Message <br>
+                                            <!--larger area to leave a message-->
+                                            <textarea class="longForm" type="text" name="message" style="height:200px"></textarea> <br><br>
+                                            <!--a submit button and a reset button-->
+                                            <input class="contactButton" type="submit" value="Submit">
+                                            <input class="resetButton" type="reset" value="Clear"><br>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                           </col-md-6>     
+                       </div>
+                   </div>
+           </div>
+       </div>
 
        <!--empty "spacer" column a twelth of the total width-->  
-       <div class="col-md-1"></div>
+       <div class="col-md-2"></div>
 
     </div>
     <!--row containing spacer-->
@@ -168,12 +181,17 @@
         <div class="col-md-12">
             <!--footer with copyright warning-->
             <div class="footer">
-                <p id="footerText">copyright &copy;</p>
+                <p id="footerText">all images &copy; Ryan Shultis 2020</p>
             </div>
         </div>
     </div>
 
 </div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 </body>
 

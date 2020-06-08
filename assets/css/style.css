@@ -1,14 +1,24 @@
+/*background image covers entire screen*/
+html { 
+    background: url('../images/landingPhoto.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  body {
+    background:transparent;
+  }
+
 /*container for the nav bar. set position to relative so child elements can be placed absolutely. set background/font color. set default
 font family for navbar. set width to 100% to occupy entire page. set appropriate height. set thin, grey bottom border.*/
 .navContainer{
     position:relative;
-    background: #ffffff;
+    background: transparent;
     color: #eee;
     width: 100%;
     height:82px;
-    border-bottom-style: solid;
-    border-bottom-color: #777777;
-    border-bottom-width: 2px;
     font-family: 'Georgia', Times, "Times New Roman", serif;
     margin-bottom: 0;
 }
@@ -18,6 +28,11 @@ font family for navbar. set width to 100% to occupy entire page. set appropriate
     height:100%;
     margin:0 auto;
     width:80%;
+    background: transparent;
+}
+
+nav{
+    background:transparent;
 }
 
 /*this should be hidden for all screen widths above 576px*/
@@ -72,8 +87,7 @@ round top corners.*/
     margin: 0;
     position: absolute;
     bottom: 0;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-radius: 4px;
 }
 
 /*Parent box for the main content of the page. set background/font colors. set appropriate
@@ -100,17 +114,22 @@ window width is altered. set thin, solid, grey border with very subtly rounded e
     border-width: 1px;
     border-radius: 2px;*/
     height:500px;
+    background: transparent;
 }
 /*action button that navigates from landing page*/
 #actionButton{
     margin:auto;
 }
 
+#carouselGreatestHits{
+    width:60%;
+}
+
 /*parent box for the sidebar. same style as parent box for the main content (see above)*/
 #sideBar{
     background: #ffffff;
     color: #777777;
-    margin: 0 20px auto 0;
+    margin: 100px 20px auto 0;
     padding:0;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     border-style: solid;
@@ -325,34 +344,33 @@ sized elements for a row of three. set height to mirror example parameters (207p
 float left so link elements line up appropriately (hug the left). set right/left 
 margins to create space between elements. round corners. set position relative so
 children elements can be positioned. create solid, teal border. relatively pronounced
-grey shadow to indicate active link.*/
+grey shadow to indicate active link.
 .portLink{
-    width:260px;
-    height:210px;
+    margin:auto;
+}*/
+
+ 
+/*sets a large right margin for even numbered links so that there are at most two links
+per row.
+.portLink:nth-child(even) {
+        margin-right: 40px;
+    }*/
+
+
+/*for portfolio link images. make photo fill entire parent container. set border radius slightly smaller than 
+parent's to remove weird empty space at corners.*/
+#portPhoto {
+    width:30%;
+    height:auto;
     float:left;
-    margin:20px 10px 25px;
-    border-radius: 20px;    
+    margin:20px 10px 20px;
+    border-radius: 20px;   
     position:relative;
     border-style: solid;
     border-color: #4aaaa5;
     border-width: 5px;
     box-shadow:5px 5px 3px 0px grey;
     overflow: auto;
-}
- 
-/*sets a large right margin for even numbered links so that there are at most two links
-per row.*/
-.portLink:nth-child(even) {
-        margin-right: 40px;
-    }
-
-
-/*for portfolio link images. make photo fill entire parent container. set border radius slightly smaller than 
-parent's to remove weird empty space at corners.*/
-#portPhoto {
-    width:100%;
-    height:100%;
-    border-radius:15px;
 }
 
 /*for portfolio link descriptions. set postion relative to parent (link) container. adjust top
@@ -377,36 +395,42 @@ natural transition between states.*/
 }
 
 /*when user hovers over link, make portfolio link descriptions visible, and 85% opaque.*/
-.portLink:hover .imgDesc {
+#portPhoto:hover .imgDesc {
     visibility: visible;
     opacity: 0.85;
 }
 
+
 /*when user hovers over portfolio link, reduce opacity of portfolio images to 60%.*/
-.portLink:hover .portPhoto {
+#portPhoto:hover #portPhoto {
     opacity: 0.6;
 }
 
 /*when user hovers over portfolio link, shadow is increased to "raise" link*/
-.portLink:hover {
+#portPhoto:hover {
     box-shadow: 8px 8px 6px 0px grey;
 }
 
 /*when portfolio link is clicked, reduce shadow to create click effect*/
-.portLink:active {
+#portPhoto:active {
     box-shadow: 3px 3px 2px 0px grey;
 }
 
+
 /*when portfolio link is clicked, increase opacity of portfolio link description to 100%*/
-.portLink:active .imgDesc {
+#portPhoto:active .imgDesc {
     visibility:visible;
     opacity:1;
 }
 
+
 /*when portfolio link is clicked, increase opacity of portfolio link image slightly (70%)*/
-.portLink:active .portPhoto{
+#portPhoto:active .portPhoto{
     opacity: 0.7;
 }
+
+
+
 
 /*******************************************************************************************************
 i tried really hard not to use media queries with this page, but i ran into two issues that i

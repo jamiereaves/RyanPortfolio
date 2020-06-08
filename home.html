@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--set the viewport to make sure the page displays correctly on all devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Shultis Photography</title>
+    <!--reset css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!--link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--custom css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<!--set the background image style="background-image:url(landingPhoto.jpg)"-->
+<body>
+
+    <!--create a container for the navbar-->
+    <div class="navContainer">
+            <!--bootstrap navbar-->    
+            <nav class="navbar navbar-expand-sm">
+                    <!--create navbar header-->
+                   <a class="navbar-brand" id="headerName">LOGO HERE!</a>  
+                    <!--parent container for navbar links-->
+                    <div  class="collapse navbar-collapse" id="navbarNavDropdown">
+                      <!--three right aligned navbar links-->
+                      <ul class="navbar-nav ml-auto">
+                          <li>
+                              <div class="btn-group">
+                                  <button type="button" class="btn btn-secondary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <span class="navbar-toggler-icon"></span>
+                                  </button>
+                                  <div class="dropdown-menu dropdown-menu-right">
+                                  <a class="dropdown-item nav-link" type="button" href="portfolio.html" style="text-align: right">albums</a>
+                                  <a class="dropdown-item nav-link" type="button" href="about.html" style="text-align: right">about</a>
+                                  </div>
+                              </div>
+                          
+                          </li>
+                      
+                    </ul>
+                    </div>
+            </nav>
+
+    </div>
+
+    <!--alternate header to fix problem where links disappear for screens smaller than #576px.
+    couldn't figure out an alternate fix that didn't include media queries. ONLY DISPLAYS ON
+    SCREENS <576px & CAN BE COMMENTED OUT-->
+    <header>
+        <section class="headerContent">
+            <h1 id="headerName">LOGO HERE!</h1>
+            <!--navigation bar linking the three component pages-->
+            <nav class="topnav">
+                <a class="altLink" href="portfolio.html">albums</a>
+                <a class="altLink" href="about.html">about</a>
+            </nav>
+        </section>
+    </header>
+
+    <!--set a break between navbar and content-->
+    <br><br>
+<!--full width container for bootstrap rows and columns-->    
+<div class="container-fluid">
+    <!--row that will contain the main content and sidebar -->
+    <div class="row">
+       <!--empty "spacer" column a twelth of the total width--> 
+       <div class="col-md-1"></div>
+       <!--column that contains the main content takes up 7/12 of the row on md & larger screens. columns collapse for s/xs-->
+       <div class="col-md-10 d-flex justify-content-center" id="landingContent">
+        <div id="carouselGreatestHits" class="carousel slide carousel-fade" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="3000">
+                <img src="assets/images/highlightReel/title.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="3000">
+              <img src="assets/images/highlightReel/2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="3000">
+              <img src="assets/images/highlightReel/3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="3000">
+              <img src="assets/images/highlightReel/4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="3000">
+              <img src="assets/images/highlightReel/5.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="3000">
+              <img src="assets/images/highlightReel/6.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="3000">
+              <img src="assets/images/highlightReel/7.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="3000">
+              <img src="assets/images/highlightReel/8.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="3000">
+              <img src="assets/images/highlightReel/9.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="3000">
+              <img src="assets/images/highlightReel/10.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="3000">
+              <img src="assets/images/highlightReel/11.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="3000">
+              <img src="assets/images/highlightReel/12.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+        </div>
+            
+       </div>
+
+
+       <!--empty "spacer" column a twelth of the total width-->  
+       <div class="col-md-1"></div>
+
+    </div>
+    <!--row containing spacer-->
+    <div class="row">
+        <!--only one column in this row, takes up the entire row-->
+        <div class="col-md-12">
+                <!--spacer that keeps the footer from covering the main content/sidebar-->
+                <div class="spacer"></div>
+        </div>
+    </div>
+    
+    <!--row containg footer-->
+    <div class="row">
+        <!--only one column in this row, takes up the entire row-->
+        <div class="col-md-12">
+            <!--footer with copyright warning-->
+            <div class="footer">
+                <p id="footerText">all images &copy; Ryan Shultis 2020</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>
