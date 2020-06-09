@@ -313,7 +313,7 @@ set accent background/font colors. set accent border color/width.*/
 .shortForm:focus,
 .longForm:focus {
     outline: none;
-    border-color: #4aaaa5;
+    border-color: #111111;
     border-width: 2px;
     background-color: #999999;
     color: #fff;
